@@ -33,10 +33,9 @@ ctx.font = '24px "Noto Color Emoji"';
 ctx.textAlign = "center";
 ctx.textBaseline = "middle";
 ctx.fillText("🍍", 16, 16);
-
-// Save the PNG
-const faviconPath = path.join(distDir, "favicon.png");
-fs.writeFileSync(faviconPath, canvas.toBuffer("image/png"));
-console.log("favicon.png generated at:", faviconPath);
+fs.writeFileSync(
+  path.join(distDir, "favicon.png"),
+  canvas.toBuffer("image/png"),
+);
 
 console.log("Build completed! Files copied to dist/");
