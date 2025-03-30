@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(
+        circle,
+        #ff00ff,
+        #00ffff,
+        #000000
+    ); /* Neon gradient */
+    font-family: "Press Start 2P", cursive;
+    overflow: hidden;
+    position: relative;
+}
+
+.retro-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.1) 2px,
+        transparent 4px
+    ); /* Subtle scanlines */
+    pointer-events: none;
+    z-index: 1;
+}
+
+#canvas {
+    width: 300px;
+    height: 300px;
+    filter: drop-shadow(0 0 10px #ff00ff); /* Neon glow */
+}
+
+h1 {
+    color: #ffff00; /* Bright yellow */
+    text-shadow:
+        4px 4px 0 #ff00ff,
+        -4px -4px 0 #00ffff; /* 80s 3D text effect */
+    font-size: 24px;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+p {
+    color: #00ffff; /* Cyan */
+    text-shadow: 2px 2px 0 #ff00ff; /* Subtle neon shadow */
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.github-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 14px;
+    color: #ffffff; /* White text */
+    background-color: #000000; /* Solid black */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><text x="0" y="15" font-size="20">🍍</text></svg>'); /* Pineapple emojis */
+    background-size: 20px 20px;
+    background-repeat: repeat;
+    border: 3px solid #00ffff; /* Cyan border */
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+    text-transform: uppercase;
+}
+
+.github-button:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 15px #ff00ff,
+        0 0 30px #00ffff; /* Neon glow on hover */
+}
