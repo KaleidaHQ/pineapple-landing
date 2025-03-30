@@ -29,10 +29,11 @@
         <link rel="manifest" href="/site.webmanifest" />
         <!-- Load Three.js and SVGLoader globally -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/examples/js/loaders/SVGLoader.js"></script>
+        <script src="/SVGLoader.js"></script>
         <!-- Expose THREE to module scope -->
         <script>
             window.THREE = THREE;
+            window.SVGLoader = THREE.SVGLoader;
         </script>
     </head>
     <body>
